@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+	
+		function addition(a, b) {
+			c = a + b;
+			return c;
+		}
+		
+		function subtraction(a, b) {
+			c = a - b;
+			return c;
+		}
+		
+		function multiplication(a, b) {
+			c = a * b;
+			return c;
+		}
+		
+		function division(a, b) {
+			c = a / b;
+			return c;
+		}
+		
+		var a = +prompt('Введите первое число: ');
+		var b = +prompt('Введите второе число: ');
+		var c;
+		
+		if (isNaN(a) || isNaN(b)) {
+			alert('Вы ввели не числа');
+		} 
+		else {
+			c = addition(a, b);
+				alert('Сумма чисел: ' + c);
+			c = subtraction(a, b);	
+				alert('Разница чисел: ' + c);
+			c = multiplication(a, b);	
+				alert('Умножение чисел: ' + c);
+			c = division(a, b);	
+				alert('Деление чисел: ' + c);
+		}
+		
+	</script>
+	<title>Document</title>
+</head>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+		
+		function countBasketPrice (arr) {
+			var sum = 0;
+			for(var i = 0; i < arr.length; i++){
+				sum += arr[i]['1'];
+				}
+			return sum;
+		}
+		
+		var product1 = ['футболка', 1250];
+		var product2 = ['толстовка', 2250];
+		var product3 = ['штаны', 1750];
+		
+		var basket = [];
+		
+		basket.push(product1);
+		basket.push(product2);
+		basket.push(product3);
+		
+		console.log('Сумма товаров в корзине: ' + countBasketPrice(basket));
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script>
+		
+		/*
+		
+		Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до 999, надо получить на выходе объект, в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 надо получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}. Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+		
+		*/
+		
+		function numberToObject(number) {
+			var numObj = number.toString().split('');
+			var obj = {};
+			var i = numObj.length;
+			
+			if (isNaN(number)) {
+				console.log('You entered not a number');
+			} 
+			else if (number < 0 || number > 999) {
+				console.log('You entered a number not in the specified range from 0 to 999');
+				return obj = null;
+			}
+			else {
+				
+				obj.units = numObj[--i];
+				
+				if (numObj.length > 1) { 
+					obj.tens = numObj[--i];
+				}
+				if (numObj.length > 2) { 
+					obj.hundreds = numObj[--i];
+				}
+
+				return obj;
+			}
+		}
+		
+		var number = +prompt('Enter any number from 0 to 999: ');
+
+		console.log('Number entered: ' + number);		
+		console.log(numberToObject(number));
+			
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

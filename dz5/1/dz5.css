@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+}
+
+.chessBoard {
+	margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.whiteSquare {
+    background-color: #ffce9e;
+}
+
+.blackSquare {
+    background-color: #d18b47;
+}
+
+.coordinateSquare, .blackSquare, .whiteSquare {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coordinateSquare {
+    background-color: #736150;
+}
+
+.coordinateSquare:first-of-type {
+    transform: rotate(180deg);
+}
+
+.line:last-of-type .coordinateSquare {
+	transform: rotate(180deg);
+}
